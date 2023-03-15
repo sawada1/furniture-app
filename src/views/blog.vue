@@ -1,5 +1,6 @@
 <template>
-    <div class="blog">
+    <div>
+        <div class="blog">
         <h2>our blog</h2>
     <div class="text">
      <router-link to="/">home</router-link>
@@ -7,6 +8,7 @@
      <p>blogs</p>
     </div> 
     </div>
+
     <div class="ourblog">
         <div class="text">
      <h3>Categories</h3>
@@ -136,13 +138,17 @@
       </div>
      </div>
     </div>
+
+    </div>
+ 
+   
 </template>
 
 <script >
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../sass/main.scss';
 
   .blog{

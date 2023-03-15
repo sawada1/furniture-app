@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="team">
         <h2>our team</h2>
     <div class="text">
@@ -7,7 +8,6 @@
      <p>team</p>
     </div>
     </div>
-
 
     <div class="ourteam">
         <div class="text">
@@ -108,13 +108,18 @@
      </div>
     </div>
     </div>
+  </div>
+  
+
+
+   
 </template>
 
 <script setup>
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '../sass/main.scss';
 
   .team{
@@ -171,7 +176,7 @@
             gap: 20px;
             color: #fff;
             background-color: $green;
-            height: 99%;
+            height: 100%;
             padding: 20px;
             transform: translateX(-100%);
             transition: 0.4s;

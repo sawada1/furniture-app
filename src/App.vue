@@ -1,11 +1,16 @@
 <template>
   <nav>
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
+ 
     <navbar/>
   
   </nav>
-  <router-view/>
+
+  <router-view v-slot="{Component}">
+  <transition name="fade">
+       <component :is="Component"></component>
+  </transition>
+  </router-view>
+
   <footter/>
 </template>
 
@@ -34,9 +39,16 @@ export default {
   color: #2c3e50;
 }
 
-// nav {
-//   padding: 30px;
-
-
-// }
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+}
+.fade-enter-from{
+  opacity: 0;
+  transform: translateX(100px);
+}
+.fade-leave-to{
+  opacity: 0;
+  transform: translateX(-100px);
+}
 </style>

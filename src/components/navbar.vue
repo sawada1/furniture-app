@@ -2,7 +2,7 @@
     <div>
       <div class="navbarr">
       <router-link to="/" class="thelogo">
-        <div class="logo">
+        <div class="logo" >
         <i class="fa-solid fa-chair"></i>
        <h1>furn<i class="fa-solid fa-lightbulb"></i> </h1>  
     </div>    
@@ -12,34 +12,34 @@
         <div class="list">
         <ul>
         <li class="mainLi">
-        <router-link to="/">
+        <router-link to="/" @click="toggle">
          home
         </router-link>
           <i @click="toggle" class="fa-solid fa-x"></i>
         </li>
         <li>
-        <router-link to="/shop">
+        <router-link to="/shop" @click="toggle">
          shop
         </router-link>
         </li>
         <li>
-        <router-link to="/about">
+        <router-link to="/about" @click="toggle">
           about        
         </router-link>
         </li>
         <li>
-        <router-link to="/team">
+        <router-link to="/team" @click="toggle">
          team
         </router-link>
         
         </li>
         <li>
-        <router-link to="/blog">
+        <router-link to="/blog" @click="toggle">
          blog
         </router-link>
         </li>
         <li>
-        <router-link to="/contact">
+        <router-link to="/contact" @click="toggle">
         contact
         </router-link>
    
@@ -78,6 +78,30 @@
                      <i  class="fa-solid fa-x"></i>                     
                  </div>
                  <div class="box">
+                   <img src="../assets/image/cart-img-2.jpg" alt="">
+                     <div class="text">
+                      <h4>modern furiture</h4>
+                      <p>1 X $140.00</p>
+                     </div>
+                     <i  class="fa-solid fa-x"></i>                     
+                 </div>
+                 <div class="box">
+                   <img src="../assets/image/cart-img-2.jpg" alt="">
+                     <div class="text">
+                      <h4>modern furiture</h4>
+                      <p>1 X $140.00</p>
+                     </div>
+                     <i  class="fa-solid fa-x"></i>                     
+                 </div>
+                 <div class="box">
+                   <img src="../assets/image/cart-img-2.jpg" alt="">
+                     <div class="text">
+                      <h4>modern furiture</h4>
+                      <p>1 X $140.00</p>
+                     </div>
+                     <i  class="fa-solid fa-x"></i>                     
+                 </div>
+                 <div class="box">
                    <img src="../assets/image/cart-img-3.jpg" alt="">
                      <div class="text">
                       <h4>modern furiture</h4>
@@ -93,8 +117,11 @@
                      </div>
                      <i  class="fa-solid fa-x"></i>                     
                  </div>
-                 <h3>total: <span>$500.00</span></h3>
-                 <button>checkout cart</button>
+                 <div class="thetotal">
+                    <h3>total: <span>$500.00</span></h3>
+                 <button>checkout cart</button>  
+                 </div>
+               
               </div>
         </div>
         <div class="login" :class="{'active':check2}">
@@ -170,7 +197,7 @@ export default {
   @import '../sass/main.scss';
 
 .navbarr{
-
+    
     .thelogo{
 
             color: $green;
@@ -263,23 +290,51 @@ export default {
         }
         .mainboxes{
             position: absolute;
-            height: fit-content;
-            padding: 10px;
+            height: 100vh;
+            padding: 50px;
             right: 0;
             background-color: #fff;
-            width: 250px;
+            width: 50%;
             display: flex;
             align-items: center;
             flex-direction: column;
             gap: 5px;
+            overflow-y: auto;
+            .thetotal{
+                display: flex;
+                align-items: center;
+            flex-direction: column;
+            text-align: center;
+            h3{
+                    color: $green;
+                    font-size: 17px;
+                    span{
+                        color: $ligth;
+                    }
+                    margin-bottom: 10px;
+                }
+                button{
+                    background-color: $green;
+                    border: none;
+                    padding: 5px;
+                    font-size: 13px;
+                    color: #fff;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: $ligth;
+                    }
+                }
+            }
             .box{
                 // margin-top: 50px;
-                &.first{
-                    margin-top: 50px;
-                }
+               margin: 20px 0px;
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                width: 100%;
+                justify-content: space-around;
                 i{
                     font-size: 14px;
                     margin: 0px 5px;
@@ -291,35 +346,22 @@ export default {
             i{
                 cursor: pointer;
                     &.close{
-                        font-size: 30px;
+                        font-size: 18px;
                         position: absolute;
-                        right: 20px;
-                        top: 10px;
-                    }
-                    transition: 0.5s;
-                    &:hover{
-                        color: $ligth;
-                    }
-                }
-                h3{
-                    color: $green;
-                    span{
-                        color: $ligth;
-                    }
-                    margin-bottom: 10px;
-                }
-                button{
-                    background-color: $green;
-                    border: none;
-                    padding: 15px;
+                        top: 1%;
+                        left: 30px;
+                        background-color: $green;
+                    padding: 7px 10px;
                     color: #fff;
+                    border-radius: 50%;
                     cursor: pointer;
-                    border-radius: 5px;
+                    }
                     transition: 0.5s;
                     &:hover{
-                        background-color: $ligth;
+                        color: $ligth;
                     }
                 }
+               
         }
     }
     .login{
@@ -342,11 +384,23 @@ export default {
             width: 270px;
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-direction: column;
+            .che{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
             i{
                 &.close{
-                    font-size: 30px;
-                    margin-bottom: 20px;
+                    font-size: 20px;
+                    position: absolute;
+                    top: 10%;
+                    left: 20px;
+                    background-color: $green;
+                    padding: 7px 10px;
+                    color: #fff;
+                    border-radius: 50%;
                     cursor: pointer;
                 }
             }
@@ -355,7 +409,7 @@ export default {
                 flex-direction: column;
               justify-content: center;
               gap: 10px;
-              border: 2px solid #333;
+            //   border: 2px solid #333;
               padding: 20px;
               p{
                 font-size: 15px;
@@ -402,11 +456,7 @@ export default {
                 input{
                     margin: 5px 0px;
                 }
-                .che{
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                }
+               
                 &.active2{
                     display: block;
                 }

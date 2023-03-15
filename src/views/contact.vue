@@ -1,5 +1,6 @@
 <template>
-    <div class="contact">
+    <div>
+        <div class="contact">
         <h2>contact us</h2>
     <div class="text">
      <router-link to="/">home</router-link>
@@ -7,6 +8,7 @@
      <p>contact</p>
     </div> 
     </div>
+
     <div class="maincontact">
       <div class="box1">
         <h3>get in touch</h3>
@@ -34,13 +36,16 @@
    <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=cairo&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br></div><a href="https://embedgooglemap.2yu.co/">html embed google map</a></div>
     </div>
     </div>
+    </div>
+   
+  
 </template>
 
 <script setup>
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../sass/main.scss';
 
 
@@ -53,7 +58,7 @@
     width: 100%;
     margin-top: 50px;
    .box1,.box2{
-    height: 730px;
+    
    }
 
    .box1{
@@ -87,12 +92,15 @@
                 border: none;
                 background-color: transparent;
                 border-bottom: 1px solid #333;
+                
             }
         }
         button{
             @include btn(10px ,20px, 18px);
+            border-radius: 20px;
             &:hover{
                 background-color: $ligth;
+               
             }
         }
     }

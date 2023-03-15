@@ -1,7 +1,8 @@
 <template>
-  <div class="about">
+  <div>
+    <div class="about">
     <h2>about us</h2>
-    <div class="text">
+    <div class="textt">
      <router-link to="/">home</router-link>
      <span>/</span>
      <p>about</p>
@@ -21,6 +22,7 @@
    <button>read more</button>
     </div>
   </div>
+
   <div class="services">
     <div class="text">
      <h3>our services</h3>
@@ -48,6 +50,11 @@
      </div>
     </div>
   </div>
+
+  </div>
+ 
+
+
 </template>
 
 
@@ -58,7 +65,7 @@
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '../sass/main.scss';
 
 .about{
@@ -75,7 +82,7 @@
       color: yellow;
     }
   }
-  .text{
+  .textt{
     display: flex;
     align-items: center;
     gap: 30px;

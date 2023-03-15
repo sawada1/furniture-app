@@ -1,5 +1,6 @@
 <template>
-    <div class="shop">
+    <div>
+        <div class="shop">
         <h2>our shop</h2>
     <div class="text">
      <router-link to="/">home</router-link>
@@ -36,7 +37,7 @@
      </div>
     </div>
     </div>
-
+     
     <div class="products">
         <div class="text">
      <h3>our products</h3>
@@ -246,13 +247,19 @@
      </div>
     </div>
     </div>
+
+    </div>
+    
+    
+
+  
 </template>
 
 <script>
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '../sass/main.scss';
 
 

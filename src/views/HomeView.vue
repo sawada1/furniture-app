@@ -179,13 +179,14 @@ export default {
       align-items: center;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
       gap: 30px;
       span{
         color: gray;
-        font-size: 30px;
+        font-size: 25px;
       }
       h2{
-        font-size: 50px;
+        font-size: 40px;
       }
       button{
         padding: 15px 30px;
@@ -212,8 +213,14 @@ export default {
   {
     background-color: $green;
     color: #fff;
-    padding: 10px 20px;
+    padding: 30px;
     font-size: 18px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin: 35px 20px;
+    &:hover{
+      background-color: $ligth;
+    }
 
   }
 }
@@ -238,6 +245,12 @@ export default {
         width: 100%;
       }
     }
+    .swiper-button-prev,
+  .swiper-button-next
+  {
+    display: none;
+
+  }
   }
 }
 .boxes{
